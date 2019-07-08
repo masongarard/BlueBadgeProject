@@ -1,0 +1,111 @@
+﻿@model IEnumerable<OARS.Models.FeatureListItem>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.FeatureID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Description)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ElevationFound)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ComparativeLayer)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Latitude)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Longitude)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Material)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ContextSoilType)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ContextSoilColorAsMunsellValue)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FeatureSoilType)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FeatureColorasMunsellValue)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DateTimeDiscovered)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IsItDiagnostic)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ArchaeologicalSignificance)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.FeatureID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Description)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ElevationFound)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ComparativeLayer)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Latitude)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Longitude)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Material)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ContextSoilType)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ContextSoilColorAsMunsellValue)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FeatureSoilType)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FeatureColorasMunsellValue)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DateTimeDiscovered)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.IsItDiagnostic)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ArchaeologicalSignificance)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+        </td>
+    </tr>
+}
+
+</table>

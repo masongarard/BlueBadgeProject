@@ -1,0 +1,81 @@
+﻿@model IEnumerable<OARS.Models.SiteListItem>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.ModernSiteName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AncientSiteName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Latitude)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Longitude)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.OccupiedEras)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CulturesPresent)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PastSiteDirectors)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CurrentSiteDirectors)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AssociatedUniversities)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.ModernSiteName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AncientSiteName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Latitude)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Longitude)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.OccupiedEras)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CulturesPresent)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PastSiteDirectors)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CurrentSiteDirectors)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AssociatedUniversities)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+        </td>
+    </tr>
+}
+
+</table>
