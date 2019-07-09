@@ -32,7 +32,7 @@ namespace OnsiteArtifactRecordSupplementMVC.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Create(ArtifactCreate model)
         {
-            if (ModelState.IsValid)
+            if (!ModelState.IsValid)
             {
                 return View(model);
             }
@@ -41,11 +41,92 @@ namespace OnsiteArtifactRecordSupplementMVC.Controllers
 
             if (service.CreateArtifact(model))
             {
+                TempData["SaveResult"] = "Your Artifact was Logged.";
                 return RedirectToAction("Index");
             }
+            ModelState.AddModelError("", "Artifact could not be created.");
             return View(model);            
         }
+        
+        public ActionResult Details(int id)
+        {
+            var svc = CreateArtifactService();
+            var model = svc.GetArtifactById(id);
 
+            return View(model);
+        }
+        //GET: Edit Artifact
+        public ActionResult Edit(int id)
+        {
+            var service = CreateArtifactService();
+            var detail = service.GetArtifactById(id);
+            var model =
+                new ArtifactEdit
+                {
+                    ArtifactID = detail.ArtifactID,                    
+                    Description = detail.Description,
+                    Weight = detail.Weight,
+                    ElevationFound = detail.ElevationFound,
+                    ComparativeLayer = detail.ComparativeLayer,
+                    Latitude = detail.Latitude,
+                    Longitude = detail.Longitude,
+                    Material = detail.Material,
+                    ContextSoilType = detail.ContextSoilType,
+                    SoilColorMunsellValue = detail.SoilColorMunsellValue,
+                    DateTimeDiscovered = detail.DateTimeDiscovered,
+                    IsItDiagnostic = detail.IsItDiagnostic,
+                    ArchaeologicalSignificance = detail.ArchaeologicalSignificance
+                };
+            return View(model);
+        }
+        //POST: Edit Artifact
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Edit(int id, ArtifactEdit model)
+        {
+            if (!ModelState.IsValid) return View(model);
+
+            if (model.ArtifactID != id)
+            {
+                ModelState.AddModelError("", "Id Mismatch");
+                return View(model);
+            }
+
+            var service = CreateArtifactService();
+
+            if (service.UpdateArtifact(model))
+            {
+                TempData["SaveResult"] = "Your note was updated.";
+                return RedirectToAction("Index");
+            }
+
+            ModelState.AddModelError("", "Your note could not be updated.");
+            return View();
+        }
+        //GET: Delete Artifact
+        [ActionName("Delete")]
+        public ActionResult Delete(int id)
+        {
+            var svc = CreateArtifactService();
+            var model = svc.GetArtifactById(id);
+
+            return View(model);
+        }
+
+        //POST: Delete Artifact
+        [HttpPost]
+        [ActionName("Delete")]
+        [ValidateAntiForgeryToken]
+        public ActionResult DeletePost(int id)
+        {
+            var service = CreateArtifactService();
+
+            service.DeleteArtifact(id);
+
+            TempData["SaveResult"] = "Your note was deleted";
+
+            return RedirectToAction("Index");
+        }
         private ArtifactService CreateArtifactService()
         {
             var userId = Guid.Parse(User.Identity.GetUserId());

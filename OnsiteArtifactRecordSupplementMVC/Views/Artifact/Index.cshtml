@@ -9,6 +9,16 @@
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>
+@if (TempData.ContainsKey("SaveResult"))
+{
+    <div class="alert alert-success fade in" role="alert">
+
+        <button type="button" class="close" data-dismiss="alert">
+            <span>&times;</span>
+        </button>
+        @TempData["SaveResult"]
+    </div>
+}
 <table class="table">
     <tr>
         <th>
@@ -20,7 +30,7 @@
         <th>
             @Html.DisplayNameFor(model => model.Weight)
         </th>
-        <th>
+        @*<th>
             @Html.DisplayNameFor(model => model.ElevationFound)
         </th>
         <th>
@@ -31,11 +41,11 @@
         </th>
         <th>
             @Html.DisplayNameFor(model => model.Longitude)
-        </th>
+        </th>*@        
         <th>
             @Html.DisplayNameFor(model => model.Material)
         </th>
-        <th>
+        @*<th>
             @Html.DisplayNameFor(model => model.ContextSoilType)
         </th>
         <th>
@@ -49,57 +59,58 @@
         </th>
         <th>
             @Html.DisplayNameFor(model => model.ArchaeologicalSignificance)
-        </th>
+        </th>*@
         <th></th>
     </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.ArtifactID)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Description)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Weight)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.ElevationFound)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.ComparativeLayer)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Latitude)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Longitude)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Material)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.ContextSoilType)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.SoilColorMunsellValue)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.DateTimeDiscovered)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.IsItDiagnostic)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.ArchaeologicalSignificance)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
-            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
-            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
-        </td>
-    </tr>
-}
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.ArtifactID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Description)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Weight)
+            </td>
+            @*<td>
+                @Html.DisplayFor(modelItem => item.ElevationFound)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ComparativeLayer)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Latitude)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Longitude)
+            </td>*@
+            <td>
+                @Html.DisplayFor(modelItem => item.Material)
+            </td>
+            @*<td>
+                @Html.DisplayFor(modelItem => item.ContextSoilType)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SoilColorMunsellValue)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DateTimeDiscovered)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IsItDiagnostic)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ArchaeologicalSignificance)
+            </td>*@
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id=item.ArtifactID }) |
+                @Html.ActionLink("Details", "Details", new { id=item.ArtifactID }) |
+                @Html.ActionLink("Delete", "Delete", new { id=item.ArtifactID })
+            </td>
+        </tr>
+    }
 
 </table>

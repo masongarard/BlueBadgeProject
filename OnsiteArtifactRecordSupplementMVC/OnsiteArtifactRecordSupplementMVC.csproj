@@ -242,6 +242,9 @@
     <Content Include="Views\Feature\Index.cshtml" />
     <Content Include="Views\Site\Index.cshtml" />
     <Content Include="Views\Artifact\Create.cshtml" />
+    <Content Include="Views\Artifact\Details.cshtml" />
+    <Content Include="Views\Artifact\Edit.cshtml" />
+    <Content Include="Views\Artifact\Delete.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

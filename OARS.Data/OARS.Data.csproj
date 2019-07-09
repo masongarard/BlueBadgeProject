@@ -70,6 +70,14 @@
     <Compile Include="Migrations\201907031817163_add-migration SecondaryMigration.Designer.cs">
       <DependentUpon>201907031817163_add-migration SecondaryMigration.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201907081409372_SecondaryMigration.cs" />
+    <Compile Include="Migrations\201907081409372_SecondaryMigration.Designer.cs">
+      <DependentUpon>201907081409372_SecondaryMigration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201907081850437_ThirdUpdate.cs" />
+    <Compile Include="Migrations\201907081850437_ThirdUpdate.Designer.cs">
+      <DependentUpon>201907081850437_ThirdUpdate.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Site.cs" />
@@ -87,6 +95,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201907031817163_add-migration SecondaryMigration.resx">
       <DependentUpon>201907031817163_add-migration SecondaryMigration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201907081409372_SecondaryMigration.resx">
+      <DependentUpon>201907081409372_SecondaryMigration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201907081850437_ThirdUpdate.resx">
+      <DependentUpon>201907081850437_ThirdUpdate.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

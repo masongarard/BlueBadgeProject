@@ -1,61 +1,32 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.Device.Location;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace OARS.Models
 {
-    public class ArtifactCreate
+    public class ArtifactEdit
     {
         [Required]
         public int ArtifactID { get; set; }
+        [Required]
+        public Guid ArchaeologistID { get; set; }
         [Required]
         public string Description { get; set; }
         [Required]
         public double Weight { get; set; }
         [Required]
-        [Display(Name = "Distance From Surface (Note: Positive Values Only Please)")]
+        [Display(Name = "Distance From Surface")]
         public float ElevationFound { get; set; }
         [Display(Name = "Relative Layer")]
         public string ComparativeLayer { get; set; }
 
-        //AAAAAAAAAAAAHHHHHHHHHHHHHH
-        //[Required]
-        //public GeoCoordinate GeoCoordinate
-        //{
-        //    get
-        //    {
-        //        return GeoCoordinate;
-        //    }
-        //    set
-        //    {
-
-        //        GeoCoordinateWatcher watcher = new GeoCoordinateWatcher();
-
-        //        // Do not suppress prompt, and wait 1000 milliseconds to start.
-        //        watcher.Start();
-
-        //        GeoCoordinate coord = watcher.Position.Location;
-        //        watcher.Stop();
-        //        if (coord.IsUnknown != true)
-        //        {
-        //            GeoCoordinate = coord;
-        //        }
-        //        else
-        //        {
-        //            GeoCoordinate = null;
-        //        }
-        //    }
-        //}
-
         [Required]
         public double Latitude { get; set; }
         [Required]
-        public double Longitude { get; set; }        
-
+        public double Longitude { get; set; }
 
         [Required]
         public string Material { get; set; }
@@ -66,7 +37,7 @@ namespace OARS.Models
         [Display(Name = "Munsell Value")]
         public string SoilColorMunsellValue { get; set; }
         [Required]
-        [Display(Name = "Date & Time Of Discovery")]
+        [Display(Name = "Discovered On:")]
         public DateTime DateTimeDiscovered { get; set; }
         [Required]
         [Display(Name = "Diagnostic? T/F")]
