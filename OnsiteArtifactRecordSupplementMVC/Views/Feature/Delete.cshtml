@@ -1,0 +1,144 @@
+﻿@model OARS.Models.FeatureDetail
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>FeatureDetail</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.FeatureID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FeatureID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ArchaeologistID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ArchaeologistID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ModernSiteName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ModernSiteName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Description)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Description)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ElevationFound)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ElevationFound)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ComparativeLayer)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ComparativeLayer)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Latitude)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Latitude)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Longitude)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Longitude)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ContextSoilType)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ContextSoilType)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ContextSoilColorAsMunsellValue)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ContextSoilColorAsMunsellValue)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FeatureSoilType)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FeatureSoilType)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FeatureColorasMunsellValue)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FeatureColorasMunsellValue)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DateTimeDiscovered)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DateTimeDiscovered)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IsItDiagnostic)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IsItDiagnostic)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ArchaeologicalSignificance)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ArchaeologicalSignificance)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

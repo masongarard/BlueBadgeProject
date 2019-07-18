@@ -3,14 +3,14 @@
     ViewBag.Title = "Send";
 }
 
-<h2>@ViewBag.Title.</h2>
+<h2 class="text-white">@ViewBag.Title.</h2>
 
 @using (Html.BeginForm("SendCode", "Account", new { ReturnUrl = Model.ReturnUrl }, FormMethod.Post, new { @class = "form-horizontal", role = "form" })) {
     @Html.AntiForgeryToken()
     @Html.Hidden("rememberMe", @Model.RememberMe)
-    <h4>Send verification code</h4>
+    <h4 class="text-white">Send verification code</h4>
     <hr />
-    <div class="row">
+    <div class="row text-white">
         <div class="col-md-8">
             Select Two-Factor Authentication Provider:
             @Html.DropDownListFor(model => model.SelectedProvider, Model.Providers)

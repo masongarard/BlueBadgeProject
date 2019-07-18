@@ -1,6 +1,7 @@
 ﻿body {
     padding-top: 50px;
     padding-bottom: 20px;
+    background: rgb(11, 12, 59);
 }
 
 /* Set padding to keep content from hitting the edges */
@@ -21,4 +22,72 @@ input,
 select,
 textarea {
     max-width: 280px;
+}
+
+
+.buttonWhite {
+    position: relative;
+    z-index: 3;
+    background: rgba(0,0,0,.5);
+    color: white;
+    font-size: 12px;
+    border-color: royalblue;
+    border-style: solid;
+    border-width: 1.5px;
+    padding: 5px 13px;
+    border-radius: 13px;
+    text-transform: uppercase;
+    transition: all 0.2s linear;
+    text-decoration: none;
+}
+
+.buttonWhite:hover {
+    position: relative;
+    z-index: 3;
+    background: royalblue;
+    color: white;
+    font-size: 12px;
+    border-color: black;
+    border-style: solid;
+    border-width: 3px;
+    padding: 5px 13px;
+    border-radius: 13px;
+    text-transform: uppercase;
+    transition: all 0.2s linear;
+    text-decoration: none;
+    }
+
+.buttonMenu {
+    position: relative;
+    z-index: 3;
+    background: rgba(0,0,0,.5);
+    color: white;
+    font-size: 12px;
+    border-color: royalblue;
+    border-style: solid;
+    border-width: 1.5px;
+    padding: 5px 13px;
+    border-radius: 13px;
+    text-transform: uppercase;
+    transition: all 0.2s linear;
+    text-decoration: none;
+}
+
+.buttonMenu:hover {
+    position: relative;
+    z-index: 3;
+    background: white;
+    color: white;
+    font-size: 12px;
+    border-color: black;
+    border-style: solid;
+    border-width: 1.5px;
+    padding: 5px 13px;
+    border-radius: 13px;
+    text-transform: uppercase;
+    transition: all 0.2s linear;
+    text-decoration: none;
+}
+.HomeText {
+    text-align:center;
 }

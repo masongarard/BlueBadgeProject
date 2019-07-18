@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace OARS.Data
 {  
@@ -12,6 +13,11 @@ namespace OARS.Data
     {
         [Key]
         public int ArtifactID { get; set; }
+
+        [ForeignKey(nameof(Site))]
+        public int SiteID { get; set; }
+
+        public virtual Site Site { get; set; }
         [Required]
         public Guid ArchaeologistID { get; set; }
         [Required]

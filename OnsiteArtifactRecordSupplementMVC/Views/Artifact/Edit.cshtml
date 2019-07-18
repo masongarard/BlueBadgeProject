@@ -18,6 +18,14 @@
     @Html.HiddenFor(model => model.ArtifactID)
     @Html.HiddenFor(model => model.ArchaeologistID)
 
+<div class="form-group">
+    @Html.LabelFor(model => model.ModernSiteName, htmlAttributes: new { @class = "control-label col-md-2" })
+    <div class="col-md-10">
+        @Html.DropDownList("SiteID", null, htmlAttributes: new { @class = "form-control" })
+        @Html.ValidationMessageFor(model => model.ModernSiteName, "", new { @class = "text-danger" })
+    </div>
+</div>
+
     <div class="form-group">
         @Html.LabelFor(model => model.Description, htmlAttributes: new { @class = "control-label col-md-2" })
         <div class="col-md-10">

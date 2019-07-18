@@ -23,6 +23,7 @@ namespace OARS.Services
                 new Artifact()
                 {
                     ArtifactID=model.ArtifactID,
+                    SiteID=model.SiteID,
                     ArchaeologistID = _archaeologistID,
                     Description=model.Description,
                     Weight=model.Weight,
@@ -57,6 +58,8 @@ namespace OARS.Services
                                 new ArtifactListItem
                                 {
                                     ArtifactID = e.ArtifactID,
+                                    SiteID=e.SiteID,
+                                    ModernSiteName=e.Site.ModernSiteName,
                                     Description = e.Description,
                                     Weight = e.Weight,
                                     //ElevationFound=e.ElevationFound,
@@ -88,6 +91,8 @@ namespace OARS.Services
                     new ArtifactDetail
                     {
                         ArtifactID = entity.ArtifactID,
+                        SiteID = entity.SiteID,
+                        ModernSiteName = entity.Site.ModernSiteName,
                         ArchaeologistID = _archaeologistID,
                         Description = entity.Description,
                         Weight = entity.Weight,
@@ -115,6 +120,7 @@ namespace OARS.Services
                         .Single(e => e.ArtifactID == model.ArtifactID && e.ArchaeologistID == _archaeologistID);
 
                 entity.ArtifactID = model.ArtifactID;
+                entity.SiteID = model.SiteID;
                 entity.ArchaeologistID = _archaeologistID;
                 entity.Description = model.Description;
                 entity.Weight = model.Weight;
@@ -145,6 +151,14 @@ namespace OARS.Services
                 ctx.Artifacts.Remove(entity);
 
                 return ctx.SaveChanges() == 1;
+            }
+        }
+
+        public List<Site> GetSites()
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                return ctx.Sites.ToList();
             }
         }
     }

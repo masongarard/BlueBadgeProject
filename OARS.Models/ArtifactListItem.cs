@@ -10,7 +10,10 @@ namespace OARS.Models
     public class ArtifactListItem
     {
         public int ArtifactID { get; set; }
-        
+
+        public int SiteID { get; set; }
+        public string ModernSiteName { get; set; }
+
         public string Description { get; set; }
         
         public double Weight { get; set; }

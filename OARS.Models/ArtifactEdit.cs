@@ -11,6 +11,8 @@ namespace OARS.Models
     {
         [Required]
         public int ArtifactID { get; set; }
+        public int SiteID { get; set; }
+        public string ModernSiteName { get; set; }
         [Required]
         public Guid ArchaeologistID { get; set; }
         [Required]

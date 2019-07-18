@@ -58,25 +58,13 @@
     <Compile Include="Artifact.cs" />
     <Compile Include="Feature.cs" />
     <Compile Include="IdentityModels.cs" />
-    <Compile Include="Migrations\201907031408283_InitialCreate.cs" />
-    <Compile Include="Migrations\201907031408283_InitialCreate.Designer.cs">
-      <DependentUpon>201907031408283_InitialCreate.cs</DependentUpon>
+    <Compile Include="Migrations\201907171412095_InitialCreate.cs" />
+    <Compile Include="Migrations\201907171412095_InitialCreate.Designer.cs">
+      <DependentUpon>201907171412095_InitialCreate.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201907031451248_add-migration InitialMigration.cs" />
-    <Compile Include="Migrations\201907031451248_add-migration InitialMigration.Designer.cs">
-      <DependentUpon>201907031451248_add-migration InitialMigration.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201907031817163_add-migration SecondaryMigration.cs" />
-    <Compile Include="Migrations\201907031817163_add-migration SecondaryMigration.Designer.cs">
-      <DependentUpon>201907031817163_add-migration SecondaryMigration.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201907081409372_SecondaryMigration.cs" />
-    <Compile Include="Migrations\201907081409372_SecondaryMigration.Designer.cs">
-      <DependentUpon>201907081409372_SecondaryMigration.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201907081850437_ThirdUpdate.cs" />
-    <Compile Include="Migrations\201907081850437_ThirdUpdate.Designer.cs">
-      <DependentUpon>201907081850437_ThirdUpdate.cs</DependentUpon>
+    <Compile Include="Migrations\201907171542079_migration8.cs" />
+    <Compile Include="Migrations\201907171542079_migration8.Designer.cs">
+      <DependentUpon>201907171542079_migration8.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -87,20 +75,11 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201907031408283_InitialCreate.resx">
-      <DependentUpon>201907031408283_InitialCreate.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201907171412095_InitialCreate.resx">
+      <DependentUpon>201907171412095_InitialCreate.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201907031451248_add-migration InitialMigration.resx">
-      <DependentUpon>201907031451248_add-migration InitialMigration.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201907031817163_add-migration SecondaryMigration.resx">
-      <DependentUpon>201907031817163_add-migration SecondaryMigration.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201907081409372_SecondaryMigration.resx">
-      <DependentUpon>201907081409372_SecondaryMigration.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201907081850437_ThirdUpdate.resx">
-      <DependentUpon>201907081850437_ThirdUpdate.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201907171542079_migration8.resx">
+      <DependentUpon>201907171542079_migration8.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

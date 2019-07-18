@@ -4,7 +4,7 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
+<h2 class="text-white">Index</h2>
 
 <p>
     @Html.ActionLink("Create New", "Create")
@@ -19,47 +19,50 @@
         @TempData["SaveResult"]
     </div>
 }
-<table class="table">
+<table class="table text-white">
     <tr>
         <th>
             @Html.DisplayNameFor(model => model.ArtifactID)
         </th>
         <th>
+            @Html.DisplayNameFor(model => model.ModernSiteName)
+        </th>
+        <th>
             @Html.DisplayNameFor(model => model.Description)
         </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Weight)
-        </th>
         @*<th>
-            @Html.DisplayNameFor(model => model.ElevationFound)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.ComparativeLayer)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Latitude)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Longitude)
-        </th>*@        
+                @Html.DisplayNameFor(model => model.Weight)
+            </th>*@
+        @*<th>
+                @Html.DisplayNameFor(model => model.ElevationFound)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ComparativeLayer)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Latitude)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Longitude)
+            </th>*@
         <th>
             @Html.DisplayNameFor(model => model.Material)
         </th>
         @*<th>
-            @Html.DisplayNameFor(model => model.ContextSoilType)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.SoilColorMunsellValue)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.DateTimeDiscovered)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.IsItDiagnostic)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.ArchaeologicalSignificance)
-        </th>*@
+                @Html.DisplayNameFor(model => model.ContextSoilType)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SoilColorMunsellValue)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DateTimeDiscovered)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IsItDiagnostic)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ArchaeologicalSignificance)
+            </th>*@
         <th></th>
     </tr>
 
@@ -70,45 +73,48 @@
                 @Html.DisplayFor(modelItem => item.ArtifactID)
             </td>
             <td>
+                @Html.DisplayFor(modelItem => item.ModernSiteName)
+            </td>
+            <td>
                 @Html.DisplayFor(modelItem => item.Description)
             </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Weight)
-            </td>
             @*<td>
-                @Html.DisplayFor(modelItem => item.ElevationFound)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.ComparativeLayer)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Latitude)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Longitude)
+                @Html.DisplayFor(modelItem => item.Weight)
             </td>*@
+            @*<td>
+                    @Html.DisplayFor(modelItem => item.ElevationFound)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ComparativeLayer)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Latitude)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Longitude)
+                </td>*@
             <td>
                 @Html.DisplayFor(modelItem => item.Material)
             </td>
             @*<td>
-                @Html.DisplayFor(modelItem => item.ContextSoilType)
-            </td>
+                    @Html.DisplayFor(modelItem => item.ContextSoilType)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.SoilColorMunsellValue)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DateTimeDiscovered)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.IsItDiagnostic)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ArchaeologicalSignificance)
+                </td>*@
             <td>
-                @Html.DisplayFor(modelItem => item.SoilColorMunsellValue)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.DateTimeDiscovered)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.IsItDiagnostic)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.ArchaeologicalSignificance)
-            </td>*@
-            <td>
-                @Html.ActionLink("Edit", "Edit", new { id=item.ArtifactID }) |
-                @Html.ActionLink("Details", "Details", new { id=item.ArtifactID }) |
-                @Html.ActionLink("Delete", "Delete", new { id=item.ArtifactID })
+                @Html.ActionLink("Edit", "Edit", new { id = item.ArtifactID }) |
+                @Html.ActionLink("Details", "Details", new { id = item.ArtifactID }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.ArtifactID })
             </td>
         </tr>
     }

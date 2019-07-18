@@ -24,6 +24,10 @@ namespace OnsiteArtifactRecordSupplementMVC.Controllers
         //GET: Create Artifact
         public ActionResult Create()
         {
+            var userId = Guid.Parse(User.Identity.GetUserId());
+            var ArtifactService = new ArtifactService(userId);
+
+            ViewBag.SiteID = new SelectList(ArtifactService.GetSites(), "SiteID", "ModernSiteName");
             return View();
         }
 
@@ -45,6 +49,7 @@ namespace OnsiteArtifactRecordSupplementMVC.Controllers
                 return RedirectToAction("Index");
             }
             ModelState.AddModelError("", "Artifact could not be created.");
+            ViewBag.SiteID = new SelectList(service.GetSites(), "SiteID", "ModernSiteName", model.SiteID);
             return View(model);            
         }
         
@@ -63,7 +68,9 @@ namespace OnsiteArtifactRecordSupplementMVC.Controllers
             var model =
                 new ArtifactEdit
                 {
-                    ArtifactID = detail.ArtifactID,                    
+                    ArtifactID = detail.ArtifactID,
+                    SiteID = detail.SiteID,
+                    ModernSiteName = detail.ModernSiteName,
                     Description = detail.Description,
                     Weight = detail.Weight,
                     ElevationFound = detail.ElevationFound,
@@ -77,6 +84,7 @@ namespace OnsiteArtifactRecordSupplementMVC.Controllers
                     IsItDiagnostic = detail.IsItDiagnostic,
                     ArchaeologicalSignificance = detail.ArchaeologicalSignificance
                 };
+            ViewBag.SiteID = new SelectList(service.GetSites(), "SiteID", "ModernSiteName", model.SiteID);
             return View(model);
         }
         //POST: Edit Artifact

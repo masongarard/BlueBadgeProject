@@ -1,0 +1,95 @@
+﻿@model OARS.Models.SiteDetail
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>SiteDetail</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.SiteID)
+        </dt>
+        <dt>
+            @Html.DisplayNameFor(model => model.ModernSiteName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ModernSiteName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AncientSiteName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AncientSiteName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Latitude)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Latitude)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Longitude)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Longitude)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.OccupiedEras)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OccupiedEras)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CulturesPresent)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CulturesPresent)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PastSiteDirectors)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PastSiteDirectors)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CurrentSiteDirectors)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CurrentSiteDirectors)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AssociatedUniversities)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AssociatedUniversities)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.SiteID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
+
+

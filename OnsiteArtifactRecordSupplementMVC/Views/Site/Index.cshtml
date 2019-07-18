@@ -4,13 +4,26 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
+<h2 class="text-white">Index</h2>
 
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>
-<table class="table">
+@if (TempData.ContainsKey("SaveResult"))
+{
+    <div class="alert alert-success fade in" role="alert">
+
+        <button type="button" class="close" data-dismiss="alert">
+            <span>&times;</span>
+        </button>
+        @TempData["SaveResult"]
+    </div>
+}
+<table class="table text-white">
     <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.SiteID)
+        </th>
         <th>
             @Html.DisplayNameFor(model => model.ModernSiteName)
         </th>
@@ -23,7 +36,7 @@
         <th>
             @Html.DisplayNameFor(model => model.Longitude)
         </th>
-        <th>
+        @*<th>
             @Html.DisplayNameFor(model => model.OccupiedEras)
         </th>
         <th>
@@ -31,7 +44,7 @@
         </th>
         <th>
             @Html.DisplayNameFor(model => model.PastSiteDirectors)
-        </th>
+        </th>*@
         <th>
             @Html.DisplayNameFor(model => model.CurrentSiteDirectors)
         </th>
@@ -41,21 +54,25 @@
         <th></th>
     </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.ModernSiteName)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.AncientSiteName)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Latitude)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Longitude)
-        </td>
-        <td>
+    @foreach (var item in Model)
+    {
+<tr>
+    <td>
+        @Html.DisplayFor(modelItem => item.SiteID)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.ModernSiteName)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.AncientSiteName)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Latitude)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Longitude)
+    </td>
+    @*<td>
             @Html.DisplayFor(modelItem => item.OccupiedEras)
         </td>
         <td>
@@ -63,19 +80,19 @@
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.PastSiteDirectors)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.CurrentSiteDirectors)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.AssociatedUniversities)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
-            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
-            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
-        </td>
-    </tr>
-}
+        </td>*@
+    <td>
+        @Html.DisplayFor(modelItem => item.CurrentSiteDirectors)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.AssociatedUniversities)
+    </td>
+    <td>
+        @Html.ActionLink("Edit", "Edit", new { id = item.SiteID }) |
+        @Html.ActionLink("Details", "Details", new { id = item.SiteID }) |
+        @Html.ActionLink("Delete", "Delete", new { id = item.SiteID })
+    </td>
+</tr>
+    }
 
 </table>
