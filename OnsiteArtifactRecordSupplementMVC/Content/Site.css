@@ -91,3 +91,33 @@ textarea {
 .HomeText {
     text-align:center;
 }
+.backgroundcolorscheme {
+    background-color: /* VELUM PARCHMENT COLOR#ebd5b3*/ /*#FFEBC8*/ rgba(255,235,200,0);
+    background-image: url(/Content/Assets/indycollage.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+}
+@font-face {
+    font-family: 'indianaJones';
+    src: url('assets/pixel-sagas_adventure/Adventure.otf');
+}
+
+.IndyFont {
+    font-family: 'indianaJones';
+    color: #f0b30d;
+    font-size: 3.8em;
+    letter-spacing: -0.025em;
+    margin: 0 0 5px;
+    text-align: center;
+    text-shadow: 1px 2px 0 royalblue;
+}
+
+.IndyFontSubtitles {
+    font-family: 'indianaJones';
+    color: #f0b30d;
+    font-size: 2em;
+    letter-spacing: -0.025em;
+    margin: 0 0 5px;
+    text-align: center;
+    text-shadow: 1px 2px 0 royalblue;
+}

@@ -2,9 +2,9 @@
     ViewBag.Title = "Home Page";
 }
 
-<div class="jumbotron HomeText">
-    <h1 class="HomeText">On-Site Artifact Record Supplement</h1>
-    <p class="lead HomeText">The OARS System allows archaeologists and excavators to chronicle their artifacts and features as they are discovered. Welcome!</p>
+<div class="jumbotron HomeText backgroundcolorscheme">
+    <h1 class="HomeText IndyFont">On-Site Artifact Record Supplement</h1>
+    <p class="lead HomeText IndyFontSubtitles">The OARS System allows archaeologists and excavators to chronicle their artifacts and features as they are discovered. Welcome!</p>
     <p><a href="https://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
 </div>
 
@@ -13,8 +13,9 @@
         <h2 class="text-white">Log an Artifact</h2>
         <p class="text-white">
             Our detailed Artifact Logs will allow you to input and then track all of the artifacts found at a particular site. Click below to get started!
-        </p class="text-white">
-        <p class="text-white"><a class="btn btn-default text-white" href="https://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p >
+        </p>
+        <button type="button" class="btn buttonMenu">@Html.ActionLink("Log An Artifact!", "Index", "Artifact")</button>
+        
     </div>
     <div class="col-md-3">
         <h2 class="text-white">Become an Archaeologist</h2>

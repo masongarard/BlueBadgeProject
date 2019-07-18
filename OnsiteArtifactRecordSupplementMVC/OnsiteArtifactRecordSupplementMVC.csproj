@@ -186,10 +186,13 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\Assets\artifactexample.jpg" />
+    <Content Include="Content\Assets\Cuneiform.jpg" />
     <Content Include="Content\Assets\featureexample.jpg" />
+    <Content Include="Content\Assets\indycollage.jpg" />
     <Content Include="Content\Assets\kabri.jpg" />
     <Content Include="Content\Assets\Kabritaketwo.jpg" />
     <Content Include="Content\Assets\liondaggerrecon.jpg" />
+    <Content Include="Content\Assets\pixel-sagas_adventure\Font License.txt" />
     <Content Include="Content\Assets\ruinsexample.jpg" />
     <Content Include="Content\Assets\stratigraphy.jpg" />
     <Content Include="Content\Assets\stratigraphytake3.jpg" />
@@ -226,6 +229,12 @@
     <Content Include="Content\bootstrap-reboot.css.map" />
     <Content Include="Content\bootstrap-grid.min.css.map" />
     <Content Include="Content\bootstrap-grid.css.map" />
+    <Content Include="Content\Assets\pixel-sagas_adventure\Adventure Hollow.otf" />
+    <Content Include="Content\Assets\pixel-sagas_adventure\Adventure Subtitles Bold Italic.otf" />
+    <Content Include="Content\Assets\pixel-sagas_adventure\Adventure Subtitles Bold.otf" />
+    <Content Include="Content\Assets\pixel-sagas_adventure\Adventure Subtitles Italic.otf" />
+    <Content Include="Content\Assets\pixel-sagas_adventure\Adventure Subtitles.otf" />
+    <Content Include="Content\Assets\pixel-sagas_adventure\Adventure.otf" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
     <Content Include="Scripts\jquery-3.3.1.min.js" />
