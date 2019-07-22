@@ -19,7 +19,7 @@ namespace OARS.Models
         [Required]
         public double Weight { get; set; }
         [Required]
-        [Display(Name = "Distance From Surface (Note: Positive Values Only Please)")]
+        [Display(Name = "Distance From Surface")]
         public float ElevationFound { get; set; }
         [Display(Name = "Relative Layer")]
         public string ComparativeLayer { get; set; }

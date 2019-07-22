@@ -4,15 +4,14 @@
     ViewBag.Title = "Edit";
 }
 
-<h2>Edit</h2>
+<h2 class="text-white">Edit Artifact Details</h2>
 
 
 @using (Html.BeginForm())
 {
     @Html.AntiForgeryToken()
     
-<div class="form-horizontal">
-    <h4>ArtifactEdit</h4>
+<div class="form-horizontal text-white">
     <hr />
     @Html.ValidationSummary(true, "", new { @class = "text-danger" })
     @Html.HiddenFor(model => model.ArtifactID)
@@ -124,9 +123,9 @@
         </div>
     </div>
 
-    <div class="form-group">
+    <div class="form-group text-white">
         <div class="col-md-offset-2 col-md-10">
-            <input type="submit" value="Save" class="btn btn-default" />
+            <input type="submit" value="Save" class="btn btn-default text-white" />
         </div>
     </div>
 </div>

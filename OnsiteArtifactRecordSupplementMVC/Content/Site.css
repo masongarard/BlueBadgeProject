@@ -1,7 +1,8 @@
 ﻿body {
-    padding-top: 50px;
-    padding-bottom: 20px;
-    background: rgb(11, 12, 59);
+    background-image: url(/Content/Assets/heiroglyphs.jpg);
+    background-size: 100%;
+    background-repeat: inherit;
+    background-position: center;
 }
 
 /* Set padding to keep content from hitting the edges */
@@ -41,20 +42,20 @@ textarea {
     text-decoration: none;
 }
 
-.buttonWhite:hover {
-    position: relative;
-    z-index: 3;
-    background: royalblue;
-    color: white;
-    font-size: 12px;
-    border-color: black;
-    border-style: solid;
-    border-width: 3px;
-    padding: 5px 13px;
-    border-radius: 13px;
-    text-transform: uppercase;
-    transition: all 0.2s linear;
-    text-decoration: none;
+    .buttonWhite:hover {
+        position: relative;
+        z-index: 3;
+        background: royalblue;
+        color: white;
+        font-size: 12px;
+        border-color: black;
+        border-style: solid;
+        border-width: 3px;
+        padding: 5px 13px;
+        border-radius: 13px;
+        text-transform: uppercase;
+        transition: all 0.2s linear;
+        text-decoration: none;
     }
 
 .buttonMenu {
@@ -73,33 +74,37 @@ textarea {
     text-decoration: none;
 }
 
-.buttonMenu:hover {
-    position: relative;
-    z-index: 3;
-    background: white;
-    color: white;
-    font-size: 12px;
-    border-color: black;
-    border-style: solid;
-    border-width: 1.5px;
-    padding: 5px 13px;
-    border-radius: 13px;
-    text-transform: uppercase;
-    transition: all 0.2s linear;
-    text-decoration: none;
-}
+    .buttonMenu:hover {
+        position: relative;
+        z-index: 3;
+        background: white;
+        color: white;
+        font-size: 12px;
+        border-color: black;
+        border-style: solid;
+        border-width: 1.5px;
+        padding: 5px 13px;
+        border-radius: 13px;
+        text-transform: uppercase;
+        transition: all 0.2s linear;
+        text-decoration: none;        
+    }
+
+
 .HomeText {
-    text-align:center;
+    text-align: center;
 }
+
 .backgroundcolorscheme {
     background-color: /* VELUM PARCHMENT COLOR#ebd5b3*/ /*#FFEBC8*/ rgba(255,235,200,0);
     background-image: url(/Content/Assets/indycollage.jpg);
     background-position: center;
     background-repeat: no-repeat;
 }
+
 @font-face {
     font-family: 'indianaJones';
-    src: url('assets/pixel-sagas_adventure/Adventure.otf');
+    src: url('./Assets/pixel-sagas_adventure/Adventure.otf');
 }
 
 .IndyFont {
@@ -113,11 +118,93 @@ textarea {
 }
 
 .IndyFontSubtitles {
-    font-family: 'indianaJones';
+    font-family:  'indianaJones';
     color: #f0b30d;
     font-size: 2em;
     letter-spacing: -0.025em;
     margin: 0 0 5px;
     text-align: center;
     text-shadow: 1px 2px 0 royalblue;
+}
+
+.backgroundfilter {
+    background-color: rgba(11, 12, 59, .75);
+    z-index: 0;
+    height: 100%;
+    position: relative;
+}
+
+.social {
+    position: fixed;
+    top: 20px;
+}
+.social ul {
+    padding: 0px;
+    -webkit-transform: translate(-270px, 0);
+    -moz-transform: translate(-270px, 0);
+    -ms-transform: translate(-270px, 0);
+    -o-transform: translate(-270px, 0);
+    transform: translate(-270px, 0);
+}
+
+.social ul li {
+    display: block;
+    margin: auto;
+    background: rgba(0, 0, 0, 0.36);
+    width: 300px;
+    text-align: right;
+    padding: 10px;
+    -webkit-border-radius: 0 30px 30px 0;
+    -moz-border-radius: 0 30px 30px 0;
+    border-radius: 0 30px 30px 0;
+    -webkit-transition: all 1s;
+    -moz-transition: all 1s;    
+    -o-transition: all 1s;
+    transition: all 1s;
+}
+
+.social ul li:hover {
+    -webkit-transform: translate(110px, 0);
+    -moz-transform: translate(110px, 0);
+    -ms-transform: translate(110px, 0);
+    -o-transform: translate(110px, 0);
+    transform: translate(110px, 0);
+    background: rgba(255, 255, 255, 0.4);
+}
+
+.social ul li:hover a {
+     color: #000;     
+}
+
+.social ul li:hover i {
+    color: #fff;
+    background: rgba(0, 0, 0, 0.36);
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+    -webkit-transition: all 1s;
+    -moz-transition: all 1s;    
+    -o-transition: all 1s;
+    transition: all 1s;
+}
+
+.social ul li i {
+    margin-left: 10px;
+    color: #000;
+    background: #fff;
+    padding: 6px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    font-size: 20px;
+    background: #ffffff;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
 }

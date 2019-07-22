@@ -4,18 +4,18 @@
     ViewBag.Title = "Create";
 }
 
-<h2>Create</h2>
+<h2 class="text-white">Log An Artifact</h2>
 
 
 @using (Html.BeginForm()) 
 {
     @Html.AntiForgeryToken()
     
-<div class="form-horizontal">
-    <h4>ArtifactCreate</h4>
+<div class="form-horizontal text-white">
+    <h4>Insert Find Details Below</h4>
     <hr />
     @Html.ValidationSummary(true, "", new { @class = "text-danger" })
-    <div class="form-group">
+    <div class="form-group text-white">
         @Html.LabelFor(model => model.ArtifactID, htmlAttributes: new { @class = "control-label col-md-2" })
         <div class="col-md-10">
             @Html.EditorFor(model => model.ArtifactID, new { htmlAttributes = new { @class = "form-control" } })
@@ -23,7 +23,7 @@
         </div>
     </div>
 
-    <div class="form-group">
+    <div class="form-group text-white">
         @Html.LabelFor(model => model.ModernSiteName, htmlAttributes: new { @class = "control-label col-md-2" })
         <div class="col-md-10">
             @Html.DropDownList("SiteID", null, htmlAttributes: new { @class = "form-control" })
@@ -31,7 +31,7 @@
         </div>
     </div>
 
-    <div class="form-group">
+    <div class="form-group text-white">
         @Html.LabelFor(model => model.Description, htmlAttributes: new { @class = "control-label col-md-2" })
         <div class="col-md-10">
             @Html.EditorFor(model => model.Description, new { htmlAttributes = new { @class = "form-control" } })
@@ -39,7 +39,7 @@
         </div>
     </div>
 
-    <div class="form-group">
+    <div class="form-group text-white">
         @Html.LabelFor(model => model.Weight, htmlAttributes: new { @class = "control-label col-md-2" })
         <div class="col-md-10">
             @Html.EditorFor(model => model.Weight, new { htmlAttributes = new { @class = "form-control" } })
@@ -47,7 +47,7 @@
         </div>
     </div>
 
-    <div class="form-group">
+    <div class="form-group text-white">
         @Html.LabelFor(model => model.ElevationFound, htmlAttributes: new { @class = "control-label col-md-2" })
         <div class="col-md-10">
             @Html.EditorFor(model => model.ElevationFound, new { htmlAttributes = new { @class = "form-control", @type = "number", @min = -.0000000000000000000000000001 } })
@@ -55,7 +55,7 @@
         </div>
     </div>
 
-    <div class="form-group">
+    <div class="form-group text-white">
         @Html.LabelFor(model => model.ComparativeLayer, htmlAttributes: new { @class = "control-label col-md-2" })
         <div class="col-md-10">
             @Html.EditorFor(model => model.ComparativeLayer, new { htmlAttributes = new { @class = "form-control" } })
@@ -63,7 +63,7 @@
         </div>
     </div>
 
-    <div class="form-group">
+    <div class="form-group text-white">
         @Html.LabelFor(model => model.Latitude, htmlAttributes: new { @class = "control-label col-md-2" })
         <div class="col-md-10">
             @Html.EditorFor(model => model.Latitude, new { htmlAttributes = new { @class = "form-control" } })
@@ -71,7 +71,7 @@
         </div>
     </div>
 
-    <div class="form-group">
+    <div class="form-group text-white">
         @Html.LabelFor(model => model.Longitude, htmlAttributes: new { @class = "control-label col-md-2" })
         <div class="col-md-10">
             @Html.EditorFor(model => model.Longitude, new { htmlAttributes = new { @class = "form-control" } })
@@ -79,7 +79,7 @@
         </div>
     </div>
 
-    <div class="form-group">
+    <div class="form-group text-white">
         @Html.LabelFor(model => model.Material, htmlAttributes: new { @class = "control-label col-md-2" })
         <div class="col-md-10">
             @Html.EditorFor(model => model.Material, new { htmlAttributes = new { @class = "form-control" } })
@@ -87,7 +87,7 @@
         </div>
     </div>
 
-    <div class="form-group">
+    <div class="form-group text-white">
         @Html.LabelFor(model => model.ContextSoilType, htmlAttributes: new { @class = "control-label col-md-2" })
         <div class="col-md-10">
             @Html.EditorFor(model => model.ContextSoilType, new { htmlAttributes = new { @class = "form-control" } })
@@ -95,7 +95,7 @@
         </div>
     </div>
 
-    <div class="form-group">
+    <div class="form-group text-white">
         @Html.LabelFor(model => model.SoilColorMunsellValue, htmlAttributes: new { @class = "control-label col-md-2" })
         <div class="col-md-10">
             @Html.EditorFor(model => model.SoilColorMunsellValue, new { htmlAttributes = new { @class = "form-control" } })
@@ -103,7 +103,7 @@
         </div>
     </div>
 
-    <div class="form-group">
+    <div class="form-group text-white">
         @Html.LabelFor(model => model.DateTimeDiscovered, htmlAttributes: new { @class = "control-label col-md-2" })
         <div class="col-md-10">
             @Html.EditorFor(model => model.DateTimeDiscovered, new { htmlAttributes = new { @class = "form-control" } })
@@ -111,7 +111,7 @@
         </div>
     </div>
 
-    <div class="form-group">
+    <div class="form-group text-white">
         @Html.LabelFor(model => model.IsItDiagnostic, htmlAttributes: new { @class = "control-label col-md-2" })
         <div class="col-md-10">
             <div class="checkbox">
@@ -121,7 +121,7 @@
         </div>
     </div>
 
-    <div class="form-group">
+    <div class="form-group text-white">
         @Html.LabelFor(model => model.ArchaeologicalSignificance, htmlAttributes: new { @class = "control-label col-md-2" })
         <div class="col-md-10">
             @Html.EditorFor(model => model.ArchaeologicalSignificance, new { htmlAttributes = new { @class = "form-control" } })
@@ -129,9 +129,9 @@
         </div>
     </div>
 
-    <div class="form-group">
+    <div class="form-group text-white">
         <div class="col-md-offset-2 col-md-10">
-            <input type="submit" value="Create" class="btn btn-default" />
+            <input type="submit" value="Create" class="btn btn-default text-white" />
         </div>
     </div>
 </div>
